@@ -54,6 +54,12 @@ bundle install
 rails s 
 ```
 
+## Testing
+> the application has tests written by rspec_rails to run the tests simply type the below command
+```bash
+rspec
+```  
+
 ## Author
 
 👤 **Youmari**
