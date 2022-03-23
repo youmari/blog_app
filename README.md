@@ -53,6 +53,20 @@ bundle install
 ```bash
 rails s 
 ```
+## Set up database
+> to create databases on your local machine follow the steps below :
+1. First make sure that postgresql installed on your machine
+2. make sure that postgresql server is runninng 
+3. run the following command to create database on your machine
+  ```bash
+  rake db:create
+  ```
+
+## Testing
+> the application has tests written by rspec_rails to run the tests simply type the below command in the root directory
+```bash
+rspec
+```  
 
 ## Author
 
