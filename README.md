@@ -2,6 +2,9 @@
 
 > BLOG_APP is a web application that allows you to create, edit delete and show blogs built with ruby on rails
 
+# ERD (Entity Relationship Diagram)
+- BLOG_APP follows this diagram for creating migration files and database
+![screenshot](./public/blog_app_erd.png)
 
 Additional description about the project and its features.
 
@@ -61,7 +64,11 @@ rails s
   ```bash
   rake db:create
   ```
-
+  ### Update schema file and database
+  - To run the migration files to update schema and databse simply run the following command :
+  ```bash
+  rails db:migrate
+  ```
 ## Testing
 > the application has tests written by rspec_rails to run the tests simply type the below command in the root directory
 ```bash
@@ -85,7 +92,3 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Microverse Team for facilitating project requirements and resources
