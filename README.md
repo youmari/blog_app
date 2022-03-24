@@ -2,6 +2,9 @@
 
 > BLOG_APP is a web application that allows you to create, edit delete and show blogs built with ruby on rails
 
+# ERD (Entity Relationship Diagram)
+- BLOG_APP follow this diagram for creating migration files and database
+![screenshot]('./public/blog_app_erd.png')
 
 Additional description about the project and its features.
 
