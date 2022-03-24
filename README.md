@@ -4,7 +4,7 @@
 
 # ERD (Entity Relationship Diagram)
 - BLOG_APP follow this diagram for creating migration files and database
-![screenshot]('./public/blog_app_erd.png')
+![screenshot](./public/blog_app_erd.png)
 
 Additional description about the project and its features.
 
