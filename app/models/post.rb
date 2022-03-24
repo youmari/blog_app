@@ -1,3 +1,3 @@
 class Post < ApplicationRecord
-  belongs_to :authorId
+  belongs_to :user
 end
