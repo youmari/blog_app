@@ -1,3 +1,8 @@
+<%= render "users/user", user: user = @user.find(params[:user_id]) %>
+<div class="bio">
+<h3>Bio<h3>
+<p><%= user.bio %></p>
+</div>
   <% @posts.each do |post| %>
     <li>
       <article>
