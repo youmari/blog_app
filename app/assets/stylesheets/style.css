@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.user-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 2rem;
+}
+
+.user-info-container {
+  display: flex;
+  gap: 30px;
+  height: 50px;
+}
+
+.user-number-of-posts {
+  align-self: flex-end;
+}
+
+.user-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

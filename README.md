@@ -23,7 +23,7 @@ Additional description about the project and its features.
 > You can simply clone or download [this repository](https://github.com/youmari/blog.git), and use your favorite browser or code editor to run this program.
 
 - To open this project using vs code ( for this example) or your favorite code editor, you can follow the guide below:
-  > in your cmd or command line navigate to where this project is located, then;
+  > in your cmd or command line navigate to where this project is located, then:
 
 ```bash
 cd blog_app
