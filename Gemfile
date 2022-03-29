@@ -45,7 +45,7 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
-#pagy for pagination
+# pagy for pagination
 gem 'pagy', '~> 5.10'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
