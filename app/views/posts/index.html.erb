@@ -1,1 +1,18 @@
 <h1>Here is a list of posts for given specific user</h1>
+  <% @posts.each do |post| %>
+    <li>
+      <article>
+        <h2><%= post.title %></h2>
+        <p><%= post.text %></p>
+        <p>Comments: <%= post.comments_counter || 0 %></p>
+        <p>Likes: <%= post.likes_counter || 0 %></p>
+        <% comments = @comments.call(post) %>
+        <% comments.each do |comment| %>
+          <section>
+            <p><span><%= @user.find(comment.author_id).name %>: </span><%= comment.text %></p>
+          </section>
+        <% end %>
+      </article>
+    </li>
+  <% end %>
+<%== pagy_nav(@pagy) %>
