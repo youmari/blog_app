@@ -1,0 +1,7 @@
+<li class="user-list">
+  <%= image_tag user.photo, alt:'user picture', class: 'user-picture' %>
+  <div class="user-info-container">
+    <h2><%= user.name %></h2><br>
+    <p class="user-number-of-posts" ><strong>Number of posts:</strong> <%= user.posts_counter || 0 %></p><br>
+  </div>
+</li>
