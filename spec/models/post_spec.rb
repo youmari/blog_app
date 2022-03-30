@@ -38,6 +38,6 @@ RSpec.describe Post, type: :model do
   end
 
   it 'return all the comments for a post' do
-    expect(Post.all_posts_for_a_user(subject.id).count).to eql 0
+    expect(Post.all_posts_for_a_user(user.id).count).to eql 1
   end
 end
