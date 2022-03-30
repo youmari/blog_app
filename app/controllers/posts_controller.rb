@@ -20,7 +20,7 @@ class PostsController < ApplicationController
       format.html { render :new, locals: { post: @post } }
     end
   end
-  
+
   def create
     @user = User.find(params[:user_id])
     add_post = @user.posts.new(post_params)
@@ -33,6 +33,7 @@ class PostsController < ApplicationController
       render :new, locals: { post: add_post }
     end
   end
+
   private
 
   def post_params

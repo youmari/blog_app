@@ -16,3 +16,4 @@
     <%= f.submit "Like" %>
   </div>
 <% end %>
+<%= link_to('Add comment', new_user_post_comment_path(user.id, @post.id) ) %>
