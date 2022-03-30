@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  # validates :title, :text, presence: true
   def index
     @title = "- #{User.find(params[:user_id]).name}"
     @pagy, @posts = pagy_countless(Post.all_posts_for_a_user(params[:user_id]), link_extra: 'data-remote="true"')
