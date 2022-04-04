@@ -25,3 +25,16 @@
   height: 150px;
   border-radius: 50%;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-btn {
+  width: 100%;
+  cursor: pointer;
+}
