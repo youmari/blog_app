@@ -7,6 +7,9 @@
   <% @comments.each do |comment| %>
     <section>
       <p><span><%= @user.find(comment.author_id).name %>: </span><%= comment.text %></p>
+      <% if can? :destroy, comment %>
+        <%= button_to "Delete Comment", user_post_comment_path(params[:user_id],@post.id,comment.id), method: :delete %>
+      <% end %>
     </section>
   <% end %>
 </article>
@@ -17,3 +20,6 @@
   </div>
 <% end %>
 <%= link_to('Add comment', new_user_post_comment_path(user.id, @post.id) ) %>
+<% if can? :destroy, @post %>
+  <%= button_to "Delete Post", user_post_path, method: :delete %>
+<% end %>

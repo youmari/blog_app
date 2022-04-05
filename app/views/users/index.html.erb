@@ -1,4 +1,6 @@
-<%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+<% if current_user %>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+<% end %>
 <ul class="users-container">
   <% @users.each do |user| %>
       <%= render "user", user: user %>

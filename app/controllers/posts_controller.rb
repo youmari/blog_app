@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @title = "- #{User.find(params[:user_id]).name}"
     @pagy, @posts = pagy_countless(Post.all_posts_for_a_user(params[:user_id]), link_extra: 'data-remote="true"')
@@ -31,6 +32,19 @@ class PostsController < ApplicationController
       flash.now[:error] = 'Error: Post could not be created'
       render :new, locals: { post: add_post }
     end
+  end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
+    Comment.all.where(post_id: params[:id]).destroy_all
+    if @post.destroy
+      Post.update_user_posts_counter(@user)
+      flash[:success] = 'Post was successfully deleted.'
+    else
+      flash[:error] = 'Something went wrong'
+    end
+    redirect_to user_posts_url
   end
 
   private

@@ -8,6 +8,11 @@ class User < ApplicationRecord
   has_many :posts, foreign_key: :author_id
   has_many :comments, foreign_key: :author_id
   has_many :likes, foreign_key: :author_id
+  ROLES = %i[admin default].freeze
 
   scope :three_recent_posts, ->(user) { user.posts.order(id: :DESC).limit(3) }
+
+  def is?(requested_role)
+    role == requested_role.to_s
+  end
 end
