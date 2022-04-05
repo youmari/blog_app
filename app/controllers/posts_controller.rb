@@ -37,6 +37,7 @@ class PostsController < ApplicationController
   def destroy
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
+    Comment.all.where(post_id: params[:id]).destroy_all
     if @post.destroy
       Post.update_user_posts_counter(@user)
       flash[:success] = 'Post was successfully deleted.'
