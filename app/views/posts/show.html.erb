@@ -17,3 +17,6 @@
   </div>
 <% end %>
 <%= link_to('Add comment', new_user_post_comment_path(user.id, @post.id) ) %>
+<% if can? :destroy, @post %>
+  <%= button_to "Delete Post", user_post_path, method: :delete %>
+<% end %>
