@@ -40,13 +40,11 @@ class PostsController < ApplicationController
     if @post.destroy
       Post.update_user_posts_counter(@user)
       flash[:success] = 'Post was successfully deleted.'
-      redirect_to user_posts_url
     else
       flash[:error] = 'Something went wrong'
-      redirect_to user_posts_url
     end
+    redirect_to user_posts_url
   end
-  
 
   private
 

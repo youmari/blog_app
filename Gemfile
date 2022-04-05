@@ -51,7 +51,7 @@ gem 'pagy', '~> 5.10'
 # devise gem for authentication
 gem 'devise'
 
-#CAnCanCan for authorization 
+# CAnCanCan for authorization
 gem 'cancancan'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
