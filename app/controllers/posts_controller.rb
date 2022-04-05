@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @title = "- #{User.find(params[:user_id]).name}"
     @pagy, @posts = pagy_countless(Post.all_posts_for_a_user(params[:user_id]), link_extra: 'data-remote="true"')
