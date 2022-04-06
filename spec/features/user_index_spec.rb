@@ -39,31 +39,5 @@ RSpec.describe 'the signin process', type: :feature do
       expect(page).to have_content 'test'
       expect(page).to have_content 'Bio'
     end
-
-    # it "should click to  log in button and got an error" do
-    #   visit 'users/sign_in'
-    #   click_on 'Log in'
-    #   expect(page).to have_content  "Invalid Email or password."
-    # end
-
-    # it "should got an error" do
-    #   visit 'users/sign_in'
-
-    #   fill_in 'Email', with: 'example@gmail.com'
-    #   fill_in 'Password', with: 'password'
-
-    #   click_on 'Log in'
-
-    #   expect(page).to have_content  "Invalid Email or password."
-    # end
-
-    # it "should log in succesfully" do
-    #   visit 'users/sign_in'
-    #   fill_in 'Email', with: 'test@test.com'
-    #   fill_in 'Password', with: 'yassine'
-    #   click_on 'Log in'
-
-    #   expect(current_path).to have_content('/users')
-    # end
   end
 end
