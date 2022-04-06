@@ -1,7 +1,7 @@
 <div class="login" >
   <h2>Log in</h2>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -18,11 +18,16 @@
         <%= f.label :remember_me %>
       </div>
     <% end %>
+    <% resource.errors.full_messages.each do |msg| %>
+      <div><%= msg %></div>
+    <% end %>
 
     <div class="actions">
       <%= f.submit "Log in", class: "login-btn" %>
     </div>
   <% end %>
+  
 
+  <%= render "devise/shared/error_messages" %>
   <%= render "devise/shared/links" %>
 </div>

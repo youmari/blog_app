@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   validates :title, length: { in: 0..250 }
   validates :comments_counter, :likes_counter, comparison: { greater_than_or_equal_to: 0 }
   belongs_to :author, class_name: 'User'
+  has_many :likes, foreign_key: :post_id
+  has_many :comments, foreign_key: :post_id
 
   scope :update_user_posts_counter, ->(user) { user.update(posts_counter: user.posts.count) }
 
